@@ -84,7 +84,7 @@ function processNotification(subscriptionId, resource, res, next) {
             io.to(subscriptionId).emit('notification_received', endpointData);
             
             //Send an email to the user for options
-            sendDescisionEmail(travelData);
+            sendDecisionEmail(travelData);
             
           } else if (requestError) {
             res.status(500);

@@ -11,28 +11,23 @@
         <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/css/fabric.min.css">
         <link rel="stylesheet" href="/css/fabric.components.min.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
     </head>
     <body>
-        <h1 class="ms-font-su">Microsoft Graph Webhook Sample for Node.js</h1>
-        <p class="ms-font-xl">To start,</p>
+        
+        <div style="background:white; width:60%; margin: 0 auto; padding:20px; border-radius:10px;">
+            <h1 class="ms-font-su">Microsoft Graph Webhook <br />Always On Time</h1>
+            <p class="ms-font-xl">Please login to create a subscription</p>
 
-        <button class="ms-Button ms-Button--hero" onclick="location.href='/signin';">
-            <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--person"></i></span>
-            <span class="ms-Button-label">Sign in with a work or school account</span>
-            <span class="ms-Button-description">Sign in with a work or school account</span>
-        </button>
+            <button class="ms-Button ms-Button--hero" onclick="location.href='/signin';">
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--person"></i></span>
+                <span class="ms-Button-label">Sign in with a work or school account</span>
+                <span class="ms-Button-description">Sign in with a work or school account</span>
+            </button>
 
-        <p class="ms-font-xl">After you sign in, the application gets an access token with permission to Read user mail. Finally, it uses the access token to get a subscription with the following characteristics.</p>
-        <div class="ms-Table">
-            <div class="ms-Table-row">
-                <span class="ms-Table-cell">Parameter</span><span class="ms-Table-cell">Value</span>
-            </div>
-            <div class="ms-Table-row">
-                <span class="ms-Table-cell">Change type</span><span class="ms-Table-cell">Created</span>
-            </div>
-            <div class="ms-Table-row">
-                <span class="ms-Table-cell">Resource</span><span class="ms-Table-cell">me/mailFolders('Inbox')/messages</span>
-            </div>
+            <p class="ms-font-xl">After you sign in, the application gets an access token with permission to create calendar events based on newly created/invited events.</p>
+            
         </div>
+        
     </body>
 </html>

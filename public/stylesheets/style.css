@@ -1,3 +1,6 @@
+body {
+  background: url('/img/background.png') center no-repeat;  
+}
 .navbar-header {
   box-sizing: border-box;
   display: block;
