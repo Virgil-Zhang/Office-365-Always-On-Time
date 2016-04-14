@@ -61,6 +61,27 @@ router.post('/', function (req, res, next) {
   res.status(status).end(http.STATUS_CODES[status]);
 });
 
+//ADD CODE HERE
+//NEED to update for GREG
+function processTravelTime(startTime, location) {
+    
+    ///gregs magic goes here
+    console.log("StartTime is: " + startTime);
+    console.log("Location is: " + location);
+    
+    return '{/"startime/":{/"1200/"},/"endtime/": {/"'+startTime+'/"},/"subject/": {/"Travel Time/"},/"body/": {/"this is your travel time/"} }'
+}
+
+
+//ADD CODE HERE
+//Semd an email to the user
+function sendDescisionEmail(travelApptData) {
+    //take gregs data
+    
+    //build outlook email message
+}
+
+
 
 // Get subscription data from the database
 // Retrieve the actual mail message data from Office 365.
@@ -76,9 +97,9 @@ function processNotification(subscriptionId, resource, res, next) {
           if (endpointData) {
            
             //We get the event object and now we try to determine the actual travel time to the appointment
-            var travelData = processTravelTime(endpointData.startTime, endpointData.location);
+            var travelApptData = processTravelTime(endpointData.start.dateTime, endpointData.location.displayName);
            
-            console.log(endpointData);
+            console.log(travelApptData);
             
             //Keep existing polling for display purposes
             io.to(subscriptionId).emit('notification_received', endpointData);
@@ -99,18 +120,6 @@ function processNotification(subscriptionId, resource, res, next) {
   });
 }
 
-//NEED to update for Grge
-function processTravelTime(startTime, location) {
-    
-    ///gregs magic goes here
-}
-
-//Semd an email to the user
-function sendDescisionEmail() {
-    //take gregs data
-    
-    //build outlook email message
-}
 
 
 module.exports = router;
