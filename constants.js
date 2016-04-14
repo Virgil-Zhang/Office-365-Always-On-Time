@@ -8,7 +8,7 @@ exports.adalConfiguration = {
 
 exports.subscriptionConfiguration = {
   changeType: 'Created',
-  notificationUrl: 'https://b9d96fb2.ngrok.io/listen',
+  notificationUrl: 'https://186bdf80.ngrok.io/listen',
   //resource: 'me/mailFolders(\'Inbox\')/messages',
   resource: 'me/events',
   clientState: 'cLIENTsTATEfORvALIDATION'
